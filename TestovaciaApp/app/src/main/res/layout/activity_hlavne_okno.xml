@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HlavneOkno"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants">
+
+    <TextView android:text="@string/title" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView_Title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_SubTitle"
+        android:text="@string/subtitle"
+        android:textSize="40sp"
+        android:layout_below="@+id/textView_Title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="82dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click"
+        android:id="@+id/button_ClickMe"
+        android:layout_below="@+id/textView_SubTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick_ClickMe" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doNotClick"
+        android:id="@+id/button_DoNotClickMe"
+        android:layout_marginLeft="57dp"
+        android:layout_marginStart="57dp"
+        android:layout_alignTop="@+id/button_ClickMe"
+        android:layout_toRightOf="@+id/button_ClickMe"
+        android:layout_toEndOf="@+id/button_ClickMe"
+        android:onClick="onClick_DoNotClickMe"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:id="@+id/editText_typeText1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/typeHere"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toastIt"
+        android:id="@+id/button_ToastIt"
+        android:onClick="onClick_ToastIt"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textView_SubTitle"
+        android:layout_alignEnd="@+id/textView_SubTitle" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/typeName"
+        android:ems="10"
+        android:minWidth="100dp"
+        android:id="@+id/editText_typeName"
+        android:layout_below="@+id/editText_typeText1"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/changeName"
+        android:id="@+id/button_changeName"
+        android:layout_alignTop="@+id/editText_typeName"
+        android:layout_alignLeft="@+id/button_ToastIt"
+        android:layout_alignStart="@+id/button_ToastIt"
+        android:onClick="onClick_ChangeName"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_colors"
+        android:layout_alignTop="@+id/textView_SubTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView_Title"
+        android:layout_toEndOf="@+id/textView_Title" />
+
+</RelativeLayout>
